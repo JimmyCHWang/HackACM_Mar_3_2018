@@ -1,0 +1,32 @@
+CMPS 12 A
+Introduction to Java (Accel.)
+0
+
+CMPS 5 J
+Java Programming
+0
+
+CMPS 11 #
+Intermediate Programming
+1 CMPS 5 J 
+
+CMPS 101 #
+Abstract Data Types
+3 MATH 19 B AMS 10 # CMPS 12 B
+
+MATH 19 A
+Calculus 1
+0
+
+MATH 19 B
+Calculus 2
+1 MATH 19 A
+
+AMS 10 #
+Engr. Methods
+0
+
+CMPS 12 B
+Data Structures
+2 CMPS 12 A CMPS 11 #
+
