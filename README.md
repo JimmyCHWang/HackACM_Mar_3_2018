@@ -9,3 +9,5 @@ General Education courses, and courses that students prefer to take.
 
 Contributor: Jingheng Wang
 E-mail: jwang280@ucsc.edu
+
+UPDATE: Completed at 21:11

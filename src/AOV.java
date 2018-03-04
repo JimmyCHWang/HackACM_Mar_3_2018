@@ -21,8 +21,8 @@ public class AOV {
 				int pos = -1;
 				for (int k=0; k<a.length; k++) if (a[k].checkSame(d[j])) pos = k;
 				if (pos != -1) {
-					e[en].u = pos;
-					e[en].v = i;
+					e[en].setU(pos);
+					e[en].setV(i);
 					en++;
 					ind[i]++;
 					otd[pos]++;
@@ -53,9 +53,9 @@ public class AOV {
 			
 			for (int i=0; i<j; i++) {
 				for (int k=0; k<en; k++) {
-					if (outlist[rnd][i] == e[k].u) {
-						ind[e[k].v]--;
-						e[k].u = -1; e[k].v = -1;
+					if (outlist[rnd][i] == e[k].getU()) {
+						ind[e[k].getV()]--;
+						e[k].setU(-1);; e[k].setV(-1);
 						tmpen--;
 					}
 				}
@@ -79,7 +79,7 @@ public class AOV {
 				
 				for (int m=0; m<j-1; m++)
 					for (int n=m+1;n<j;n++) {
-						System.out.println(i+" "+m+" "+temp[m]+" "+n+" "+temp[n]);
+//						System.out.println(i+" "+m+" "+temp[m]+" "+n+" "+temp[n]);
 						if (otd[temp[m]]<otd[temp[n]]) {
 							int t = temp[m];
 							temp[m] = temp[n];
