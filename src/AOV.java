@@ -48,6 +48,7 @@ public class AOV {
 				if (ind[i] == 0) {
 					outlist[rnd][j++] = i;
 					f = true;
+					ind[i] = -1;
 			}
 			
 			for (int i=0; i<j; i++) {
@@ -60,7 +61,10 @@ public class AOV {
 				}
 			}
 			
-		} while (f && tmpen>0);
+		} while (f);
+		
+//		System.out.println(rnd);
+//		for (int i=0; i<=rnd+1; i++) for (int j=0; j<=5; j++) System.out.println(outlist[i][j]);
 		
 		if (tmpen == 0) {
 			CourseSimp[][] ans = new CourseSimp[1000][1000];
@@ -70,9 +74,12 @@ public class AOV {
 				while (outlist[i][j] != -1) {
 					temp[j] = outlist[i][j];
 					j++;
+//					System.out.print(j+" ");
 				}
-				for (int m=0; i<j-1; m++)
-					for (int n=i+1;n<j;n++) {
+				
+				for (int m=0; m<j-1; m++)
+					for (int n=m+1;n<j;n++) {
+						System.out.println(i+" "+m+" "+temp[m]+" "+n+" "+temp[n]);
 						if (otd[temp[m]]<otd[temp[n]]) {
 							int t = temp[m];
 							temp[m] = temp[n];

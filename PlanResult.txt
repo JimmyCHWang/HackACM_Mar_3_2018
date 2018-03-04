@@ -1,0 +1,46 @@
+Session 1:
+
+Course Name:CMPS 5J
+Description: Java Programming 
+Prerequisites:
+None
+
+Course Name:MATH 19A
+Description: Calculus 1 
+Prerequisites:
+None
+
+Course Name:AMS 10
+Description: Engr. Methods 
+Prerequisites:
+None
+
+
+Session 2:
+
+Course Name:MATH 19B
+Description: Calculus 2 
+Prerequisites:
+MATH 19A
+
+Course Name:CMPS 11
+Description: Intermediate Programming 
+Prerequisites:
+CMPS 5J
+
+Session 3:
+
+Course Name:CMPS 12B
+Description: Data Structures 
+Prerequisites:
+MATH 19B
+CMPS 11
+
+Session 4:
+
+Course Name:CMPS 101
+Description: Abstract Data Types 
+Prerequisites:
+MATH 19B
+AMS 10
+CMPS 12B

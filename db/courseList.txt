@@ -1,7 +1,3 @@
-CMPS 12 A
-Introduction to Java (Accel.)
-0
-
 CMPS 5 J
 Java Programming
 0
@@ -28,5 +24,5 @@ Engr. Methods
 
 CMPS 12 B
 Data Structures
-2 CMPS 12 A CMPS 11 #
+2 MATH 19 B CMPS 11 #
 

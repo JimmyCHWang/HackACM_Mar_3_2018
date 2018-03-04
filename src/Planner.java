@@ -43,8 +43,11 @@ public class Planner {
 	public static void display(CourseSimp[][] p) throws Exception {
 		PrintWriter out = new PrintWriter(new FileWriter("PlanResult.txt"));
 		
+		int fin = 0; while (p[fin][0]!=null) fin++;
+		
 		int ses = 1; int crs = 0;
-		for (int i=0; i<p.length; i++) {
+		out.println("Session "+ses+":");
+		for (int i=0; i<fin; i++) {
 			crs = 0;
 			
 			for (int j=0; j<p[0].length; j++) {
@@ -53,9 +56,10 @@ public class Planner {
 					Course temp = getCourse(p[i][j].getDept(),p[i][j].getNum(),p[i][j].getAlpha());
 					out.println();
 					out.printf("Course Name:%s %d%s\n", temp.getDept(),temp.getNum(),temp.getAlpha());
-					out.printf("Description: \n", temp.getDesc());
+					out.printf("Description: %s \n", temp.getDesc());
 					out.printf("Prerequisites:\n");
 					CourseSimp[] t = temp.getAllPrereq();
+					if (temp.getNumPrereq() == 0) out.println("None");
 					for (int k=0; k<temp.getNumPrereq(); k++) out.printf("%s %d%s\n", t[k].getDept(),t[k].getNum(),t[k].getAlpha());
 					if (crs % 3 == 0) {
 						ses++;
@@ -63,7 +67,7 @@ public class Planner {
 					}
 				}
 			}
-			if (crs % 3 !=0) { ses++; out.println("Session "+ses+":");}
+			if (crs % 3 !=0 && i != fin-1) { ses++; out.println(); out.println("Session "+ses+":");}
 		}
 		out.close();
 	}
